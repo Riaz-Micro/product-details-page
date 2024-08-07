@@ -1,0 +1,670 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&display=swap');
+/* Astra, and GeneratePress Theme Compatibility */
+.ast-container,
+.site-content {
+    display: block !important;
+}
+/* OceanWP Theme Compatibility */
+#site-header-inner,
+#site-logo {
+    height: auto !important;
+}
+
+/* Page Container */
+#gpsc-main {
+    --default-font: "Fira Sans", sans-serif;
+    --primary-color: #3749bb;
+    --primary-color-rgb: 55, 73, 187;
+    --secondary-color: #ef4a23;
+    box-sizing: border-box;
+    font-family: var(--default-font);
+    background-color: #ffffff;
+    padding-top: 30px;
+}
+.gpsc-container {
+    max-width: 1320px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.gpsc-container h1,
+.gpsc-container h2,
+.gpsc-container h3,
+.gpsc-container h4,
+.gpsc-container h5,
+.gpsc-container h6 {
+    margin: 0;
+    font-family: var(--default-font);
+    line-height: 1.2;
+}
+
+.gpsc-row {
+    display: grid;
+    gap: 24px;
+}
+
+#gpsc-main p {
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #01132d;
+    line-height: 1.73
+}
+
+/* Breadcrumb */
+.gpsc-breadcrumb .woocommerce-breadcrumb {
+    width: 50%;
+    overflow: hidden;
+    font-weight: 700;
+    margin-bottom: 20px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.gpsc-breadcrumb a {
+    color: #111111;
+    position: relative;
+    line-height: 16px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    transition: .3s ease-in-out;
+}
+.gpsc-breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+/* Product Action Area */
+.gpsc-product-details {
+    padding: 0px 0 30px;
+}
+.gpsc-product-details .gpsc-action {
+    margin: 0 0 30px;
+    background: #fff;
+    padding: 15px 20px 15px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+.gpsc-product-details .gpsc-action .gpsc-share-on {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+.gpsc-product-details .gpsc-action .gpsc-share-on span {
+    font-size: 14px;
+    font-weight: 500;
+}
+.gpsc-product-details .gpsc-action .gpsc-share-on ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.gpsc-product-details .gpsc-action .gpsc-share-on ul li {
+    display: inline-block;
+}
+.gpsc-product-details .gpsc-action .gpsc-share-on ul li a {
+    line-height: 1;
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    border-radius: 50%;
+    background-color: #eeeeee;
+    transition: 0.3s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.gpsc-product-details .gpsc-action .gpsc-share-on ul li a svg {
+    transition: 0.3s ease-in-out;
+    fill: #111111;
+}
+.gpsc-product-details .gpsc-action .gpsc-share-on ul li a:hover {
+    background-color: #111111;
+}
+.gpsc-product-details .gpsc-action .gpsc-share-on ul li a:hover svg {
+    fill: #ffffff;
+}
+.gpsc-product-details .gpsc-action .gpsc-share-on ul li:last-child a {
+    margin-right: 0;
+}
+.gpsc-product-details .gpsc-action .gpsc-options {
+    margin-bottom: -6px;
+}
+.gpsc-product-details .gpsc-action .gpsc-options ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.gpsc-product-details .gpsc-action .gpsc-options ul li {
+    display: inline-block;
+}
+.gpsc-product-details .gpsc-action .gpsc-options ul li a {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 15px;
+    text-decoration: none;
+    transition: 0.5s ease-in-out;
+    color: #111111;
+    font-size: 14px;
+    font-weight: 400;
+}
+.gpsc-product-details .gpsc-action .gpsc-options ul li a svg {
+    margin-right: 5px;
+}
+.gpsc-product-details .gpsc-action .gpsc-options ul li a:hover {
+    color: var(--secondary-color);
+}
+.gpsc-product-details .gpsc-action .gpsc-options ul li:last-child a {
+    margin-right: 0;
+}
+
+/* Product Description Area */
+.gpsc-product-details .gpsc-row {
+    grid-template-columns: 40% 60%;
+}
+.gpsc-text-content-area .gpsc-product-name {
+    color: var(--primary-color);
+    padding: 5px 0 10px;
+    font-size: 22px;
+    font-weight: 400;
+    margin: 0;
+    text-decoration: none;
+}
+
+/* Product Image Area */
+.gpsc-product-img {
+    display: block;
+    margin-bottom: 30px;
+}
+.gpsc-thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.gpsc-product-gallery figure {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.gpsc-product-gallery figcaption {
+    display: none;
+}
+.gpsc-thumbnails .gpsc-thumb-image  {
+    width: 60px;
+    padding: 10px;
+    border: 1px solid #eeeeee;
+    margin-bottom: 0px;
+}
+
+/* Product Info Area */
+.gpsc-product-info {
+    margin: 0 0 15px;
+    padding: 0;
+    list-style: none;
+}
+.gpsc-product-info-group {
+    background-color: rgba(var(--primary-color-rgb), .05);
+    margin: 0 7px 7px -2px;
+    display: inline-block;
+    border-radius: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    font-size: 14px;
+}
+.gpsc-product-info-group .gpsc-product-info-label {
+    color: #666666;
+}
+.gpsc-product-info-group .gpsc-product-info-data {
+    font-weight: 700;
+}
+.gpsc-product-info-group .gpsc-product-info-data ins {
+    text-decoration: none;
+}
+.gpsc-product-info-group .gpsc-product-info-data del {
+    color: #666;
+    margin-left: 5px;
+}
+
+/* Product Short Description */
+.gpsc-product-short-description {
+    margin-bottom: 10px;
+}
+.gpsc-product-short-description h2 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: #000000;
+}
+.gpsc-product-short-description ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.gpsc-product-short-description ul li {
+    display: block;
+    font-size: 15px;
+    line-height: 20px;
+    padding-bottom: 10px;
+}
+.gpsc-product-short-description .gpsc-view-btn {
+    padding: 0;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--secondary-color);
+    border-bottom: 1px solid var(--secondary-color);
+    transition: .3s ease;
+    cursor: pointer;
+    font-size: 14px;
+}
+.gpsc-product-short-description .gpsc-view-btn:hover {
+    box-shadow: 0 1px 0 var(--secondary-color);
+}
+
+/* Cart Area */
+.gpsc-cart, .variations_button {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+.gpsc-cart .quantity, .variations_form .quantity {
+    display: flex;
+    border: 1px solid #d3d3d3;
+}
+.gpsc-cart .quantity .qty-btn, .variations_form .quantity .qty-btn {
+    display: flex;
+    width: 40px;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    background-color: transparent;
+    transition: .3s ease;
+    border: none;
+    cursor: pointer;
+}
+.gpsc-cart .quantity .qty-btn:hover, .variations_form .quantity .qty-btn:hover {
+    background-color: #eeeeee;
+}
+.gpsc-cart .quantity .input-text, .variations_form .quantity .input-text {
+    width: 60px !important;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    background-color: transparent;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    border-left: 1px solid #d3d3d3;
+    border-right: 1px solid #d3d3d3;
+    padding: 8px;
+}
+.gpsc-cart .single_add_to_cart_button, .variations_form .single_add_to_cart_button {
+    background: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: 0 20px !important;
+    display: inline-block;
+    transition: .3s ease;
+    margin: 0 !important;
+    height: 42px;
+    line-height: 38px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    outline: none;
+    text-align: center;
+    min-width: 200px;
+}
+.gpsc-cart .single_add_to_cart_button:hover, .variations_form .single_add_to_cart_button:hover {
+    box-shadow: 0 50px rgba(0, 0, 0, .2) inset;
+}
+
+/* Full Description area */
+.gpsc-full-description {
+    padding: 20px 0;
+    background-color: #F2F4F8;
+}
+.gpsc-full-description .gpsc-row {
+    grid-template-columns: 70% 30%;
+}
+.gpsc-tab .gpsc-tab-contents  {
+    display: none;
+}
+.gpsc-tab .gpsc-tab-contents.show {
+    display: block;
+}
+.gpsc-tab-btns button {
+    border: none;
+    flex: 0 0 auto;
+    color: #000000;
+    padding: 0 20px;
+    font-size: 14px;
+    cursor: pointer;
+    list-style: none;
+    font-weight: bold;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 5px;
+    background: #ffffff;
+    transition: .3s ease;
+    margin: 0 10px 20px 0;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+}
+.gpsc-tab-btns button:hover, .gpsc-tab-btns button.active {
+    color: #ffffff;
+    box-shadow: none;
+    background: var(--secondary-color);
+}
+.gpsc-description-left .gpsc-tab-contents {
+    padding: 20px;
+    margin-top: 0;
+    background: #ffffff;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+}
+.gpsc-tab-contents .gpsc-section-head {
+    padding-bottom: 20px;
+}
+.gpsc-tab-contents.ask-question .gpsc-section-head, .gpsc-tab-contents.write-review .gpsc-section-head {
+    border-bottom: 1px solid #eee;
+    /* padding-bottom: 0; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+.gpsc-tab-contents .gpsc-section-head h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.gpsc-tab-contents .gpsc-section-head .gpsc-action-title .gpsc-section-text {
+    margin: 0 !important;
+    color: #666 !important;
+    font-size: 15px;
+}
+.gpsc-tab-contents .gpsc-action-btn {
+    flex-shrink: 0;
+}
+.gpsc-tab-contents .gpsc-action-btn .gpsc-btn-outline {
+    display: inline-block;
+    border: 2px solid var(--primary-color);
+    transition: .3s ease;
+    padding: 10px 20px;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary-color);
+    cursor: pointer;
+    border-radius: 4px;
+    outline: none;
+    text-align: center;
+    text-decoration: none;
+}
+.gpsc-tab-contents .gpsc-action-btn .gpsc-btn-outline:hover {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+.gpsc-tab-contents .gpsc-data-table {
+    width: 100%;
+    margin-top: -20px;
+}
+.gpsc-tab-contents .gpsc-data-table.gpsc-flex-table {
+    display: flex;
+    flex-direction: column;
+}
+.gpsc-flex-table tr {
+    display: flex;
+}
+.gpsc-flex-table tbody tr {
+    border-bottom: 1px solid #ecedef;
+}
+.gpsc-data-table .heading-row {
+    background: rgba(var(--primary-color-rgb), 0.05);
+    color: var(--primary-color);
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 600;
+    padding: 6px 20px;
+    margin: 20px 0 0;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+}
+.gpsc-tab-contents .gpsc-data-table tbody td {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 400;
+    width: 100%;
+}
+.gpsc-data-table td.name {
+    flex: 0 0 250px;
+    display: flex;
+    color: #666;
+}
+.gpsc-tab-contents .gpsc-data-table tbody td.value {
+    font-weight: 500;
+}
+.gpsc-full-desc h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+/* Variations Style */
+.variations tr {
+    margin-top: 10px;
+    display: block;
+}
+.variations tr .label {
+    min-width: 80px;
+    width: 100px;
+    text-align: left;
+    position: relative;
+    font-weight: 500;
+    font-size: 14px;
+}
+.variations tr .label::before {
+    content: ":";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.variations select {
+    border: 0px;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px !important;
+    font-weight: 400;
+    padding: 10px 10px !important;
+    border-radius: 5px;
+    text-transform: capitalize;
+    background-color: #eee;
+    height: unset !important;
+}
+.single_variation .price del .woocommerce-Price-amount bdi {
+    font-size: 16px;
+    color: #a8a8a8 !important;
+}
+.single_variation .price ins .woocommerce-Price-amount bdi {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-color) !important;
+}
+
+/* Description Right Area */
+.gpsc-description-sidebar .related  {
+    background: #fff;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    margin-top: 0;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+}
+.gpsc-description-sidebar .related h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: capitalize;
+    text-align: center;
+    padding: 5px 0 15px;
+    color: var(--primary-color);
+}
+.woocommerce .gpsc-description-sidebar .products ul, .woocommerce ul.products {
+    margin: 0;
+}
+.gpsc-description-sidebar  ul.products li.product, .gpsc-description-sidebar  ul.products li.product {
+    width: 100%;
+    min-height: 140px;
+    padding: 20px 0 20px 120px;
+    border-top: 1px solid #eeeeee;
+    position: relative;
+    box-sizing: border-box;
+    margin: 0;
+}
+.gpsc-description-sidebar ul.products li.product a img {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #eeeeee;
+    position: absolute;
+    left: 0;
+    top: 20px;    
+}
+.gpsc-description-sidebar ul.products li.product .woocommerce-loop-product__title {
+    text-align: left;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 0;
+    margin-bottom: 5px;
+    color: #000000;
+}
+.gpsc-description-sidebar ul.products li.product .woocommerce-loop-product__title:hover {
+    text-decoration: underline;
+}
+.gpsc-description-sidebar ul.products li.product .onsale {
+    left: 4px;
+    top: 30px;
+    right: unset;
+    padding: 5px 10px 3px;
+    line-height: 1;
+    min-height: 10px;
+    min-width: 10px;
+    font-size: 12px;
+    border-radius: 0;
+    font-weight: 400;
+}
+.gpsc-description-sidebar ul.products li.product .button {
+    margin-top: 0;
+    padding: 0;
+    background-color: transparent;
+    transition: .3s ease;
+    color: var(--primary-color);
+}
+.gpsc-description-sidebar ul.products li.product .button:hover {
+    color: var(--secondary-color);
+}
+
+/* Empty Question */
+.gpsc-empty-content {
+    padding: 50px 0;
+    text-align: center;
+    width: 100%;
+}
+.gpsc-empty-content .gpsc-ques-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(var(--primary-color-rgb), 0.1);
+    color: var(--primary-color);
+    border-radius: 50px;
+    width: 88px;
+    height: 88px;
+    margin: 0 auto;
+}
+.gpsc-empty-content .gpsc-ques-icon svg {
+    width: 32px;
+}
+.gpsc-empty-content .gpsc-empty-text {
+    color: #666 !important;
+    padding-top: 20px;
+    font-size: 14px;    
+    margin: 0;
+}
+
+/* Comments List */
+.gpsc-comment-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.gpsc-comment-list .woocommerce-page img {
+    
+}
+
+/* Should remove inner spin buttons from quantity field */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* Media Query  */
+@media only screen and (max-width: 768px) {
+    .gpsc-breadcrumb .woocommerce-breadcrumb {
+        width: 100%;
+    }
+
+    .gpsc-full-description .gpsc-row,
+    .gpsc-product-details .gpsc-row {
+        grid-template-columns: 100%;
+    }
+
+    .gpsc-description-sidebar ul.products li.product, .gpsc-description-sidebar ul.products li.product {
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    .gpsc-flex-table tr {
+        flex-wrap: wrap;
+    }
+
+    .gpsc-tab-btns {
+        display: flex;
+    }
+
+    .gpsc-tab-btns button {
+        margin: 0 3px 20px 0;
+        flex: 1 1 auto;
+        padding: 0;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .gpsc-product-details .gpsc-action {
+        padding: 10px;
+    }
+    .gpsc-product-details .gpsc-action .gpsc-share-on ul li a {
+        width: 20px;
+        height: 20px;
+        margin-right: 0;
+    }
+
+    .gpsc-product-details .gpsc-action .gpsc-options ul li a {
+        margin-right: 3px;
+    }
+}

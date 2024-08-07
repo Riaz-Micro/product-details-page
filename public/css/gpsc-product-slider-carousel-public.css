@@ -1,0 +1,61 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+.gpsc--product-slider-carousel {
+    position: relative;
+}
+.gpsc---carousel-slider-container {
+    width: 100%;
+    height: auto;
+}
+.swiper-slide {
+    text-align: center;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+/* Customize Product Details */
+.gpsc--product-slider-carousel .gpsc--product-image a {
+    font-size: 14px;
+    text-decoration: none;
+}
+.gpsc--product-image img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.gpsc--product-image h2 {
+    margin: 0;
+    margin-bottom: -15px;
+    padding: 0;
+    font-size: 16px;
+}
+.swiper-slide p.product {
+    padding-top: 0 !important;
+    border: none !important;
+}
+/* Add to cart button */
+.gpsc--product-slider-carousel .add_to_cart_button {
+    display: block;
+    margin-top: 20px;
+    background: #eeeeee;
+    color: #333333;
+    border: 1px solid #eeeeee;
+    border-radius: 0px;
+    transition: .2s;
+}
+.gpsc--product-slider-carousel .add_to_cart_button:hover {
+    background: #d5d5d5;
+    color: #333333;
+    border-radius: 0px;
+}
