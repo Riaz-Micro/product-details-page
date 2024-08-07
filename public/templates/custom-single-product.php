@@ -150,33 +150,7 @@ wp_enqueue_style( 'gpsc-sstyle', GPSC_PLUG_DIR_URL_FILE . 'public/css/gpsc-singl
         comments_template();
     
         // Display standard comments without ratings
-        if ( $comments_without_rating ) {
-            echo '<h2>Comments without Ratings (' . $count_comments_without_rating . ')</h2>';
-            echo '<ul class="comment-list">';
-            foreach ( $comments_without_rating as $comment ) {
-                ?>
-                <li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
-                    <article id="div-comment-<?php comment_ID(); ?>" class="comment-body">
-                        <footer class="comment-meta">
-                            <div class="comment-author vcard">
-                                <?php echo get_avatar( $comment, 50 ); ?>
-                                <?php printf( '<b class="fn">%s</b>', get_comment_author( $comment ) ); ?>
-                            </div>
-                        </footer>
-                        <div class="comment-content">
-                            <?php comment_text( $comment ); ?>
-                        </div>
-                        <div class="comment-reply">
-                            <?php comment_reply_link( array( 'reply_text' => 'Reply', 'depth' => 1, 'max_depth' => 5 ) ); ?>
-                        </div>
-                    </article>
-                </li>
-                <?php
-            }
-            echo '</ul>';
-        } else {
-            echo '<p>No comments found.</p>';
-        }
+        
     
         // Display the comment form
         comment_form();
@@ -365,8 +339,8 @@ wp_enqueue_style( 'gpsc-sstyle', GPSC_PLUG_DIR_URL_FILE . 'public/css/gpsc-singl
                     <div class="gpsc-tab-btns">
                         <button data-target="specification" class="active">Specification</button>
                         <button data-target="description">Description</button>
-                        <button data-target="ask-question">Questions (0)</button>
-                        <button data-target="write-review">Reviews (0)</button>
+                        <button data-target="ask-question">Questions (<?php echo'' . $count_reviews_without_rating . ''; ?>)</button>
+                        <button data-target="write-review">Reviews <?php echo '(' . $count_reviews_with_rating . ')'; ?></button>
                     </div>
                     <div class="gpsc-tab-contents specifications show" id="specification">
                         <div class="gpsc-section-head">
@@ -423,10 +397,43 @@ wp_enqueue_style( 'gpsc-sstyle', GPSC_PLUG_DIR_URL_FILE . 'public/css/gpsc-singl
                             </div>
                         </div>
                         <div class="gpsc-question">
-                            <div class="gpsc-empty-content ">
-                                <span class="gpsc-ques-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20"  viewBox="0 0 24 24"><path fill="currentColor" d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2M9 11H7V9h2zm4 0h-2V9h2zm4 0h-2V9h2z"/></svg></span>
-                                <p class="gpsc-empty-text">There are no questions asked yet. Be the first one to ask a question.</p>
-                            </div>
+                            <?php
+                                
+                                if ( $reviews_without_rating ) {
+                                    echo '<ul class="comment-list gpsc-comment-list">';
+                                    foreach ( $reviews_without_rating as $review ) {
+                                        ?>
+                                        <li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
+                                            <article id="div-comment-<?php comment_ID(); ?>" class="comment-body">
+                                                <footer class="comment-meta">
+                                                    <div class="comment-author vcard">
+                                                        <?php echo get_avatar( $review, 50 ); ?>
+                                                        <?php printf( '<p class="gpsc-comment-author">%s</p>', get_comment_author( $review ) ); ?>
+                                                    </div>
+                                                </footer>
+                                                <div class="comment-content">
+                                                    <?php comment_text( $review ); ?>
+                                                </div>
+                                                <div class="comment-reply">
+                                                <?php
+                                                    echo '<svg xmlns="http://www.w3.org/2000/svg" width="18" viewBox="0 0 24 24"><path fill="currentColor" d="M10 9V5l-7 7l7 7v-4.1c5 0 8.5 1.6 11 5.1c-1-5-4-10-11-11"/></svg>'; 
+                                                    comment_reply_link( array( 'reply_text' => 'Reply', 'depth' => 1, 'max_depth' => 5 ) ); 
+                                                 ?>
+                                                </div>
+                                            </article>
+                                        </li>
+                                        <?php
+                                    }
+                                    echo '</ul>';
+                                } else {
+                                    echo '
+                                        <div class="gpsc-empty-content ">
+                                            <span class="gpsc-ques-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20"  viewBox="0 0 24 24"><path fill="currentColor" d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2M9 11H7V9h2zm4 0h-2V9h2zm4 0h-2V9h2z"/></svg></span>
+                                            <p class="gpsc-empty-text">There are no questions asked yet. Be the first one to ask a question.</p>
+                                        </div>
+                                    ';
+                                }
+                            ?>
                         </div>
                     </div>
                     <!-- Reviews Area -->
@@ -451,7 +458,7 @@ wp_enqueue_style( 'gpsc-sstyle', GPSC_PLUG_DIR_URL_FILE . 'public/css/gpsc-singl
                                             <footer class="comment-meta">
                                                 <div class="comment-author vcard">
                                                     <?php echo get_avatar( $review, 50 ); ?>
-                                                    <?php printf( '<p class="fn">%s</p>', get_comment_author( $review )); ?>
+                                                    <?php printf( '<p class="gpsc-comment-author">%s</p>', get_comment_author( $review )); ?>
                                                     <?php
                                                         // Display rating if available
                                                         $rating = get_comment_meta( $review->comment_ID, 'rating', true );
@@ -469,10 +476,12 @@ wp_enqueue_style( 'gpsc-sstyle', GPSC_PLUG_DIR_URL_FILE . 'public/css/gpsc-singl
                                             </footer>
                                             <div class="comment-content">
                                                 <?php comment_text( $review ); ?>
-
                                             </div>
                                             <div class="comment-reply">
-                                                <?php comment_reply_link( array( 'reply_text' => 'Reply', 'depth' => 1, 'max_depth' => 5 ) ); ?>
+                                                <?php
+                                                    echo '<svg xmlns="http://www.w3.org/2000/svg" width="18" viewBox="0 0 24 24"><path fill="currentColor" d="M10 9V5l-7 7l7 7v-4.1c5 0 8.5 1.6 11 5.1c-1-5-4-10-11-11"/></svg>'; 
+                                                    comment_reply_link( array( 'reply_text' => 'Reply', 'depth' => 1, 'max_depth' => 5 ) ); 
+                                                 ?>
                                             </div>
                                         </article>
                                     </li>

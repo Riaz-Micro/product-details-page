@@ -606,9 +606,127 @@
     padding: 0;
     list-style: none;
 }
+.gpsc-comment-list .review {
+    padding: 20px 0;
+    border-bottom: 1px solid #eeeeee;
+}
+.gpsc-comment-list .review:last-child {
+    padding-bottom: 0;
+    border: none;
+}
+.gpsc-comment-list .comment-author {
+    position: relative;
+    min-height: 60px;
+    padding-left: 70px;
+}
+.gpsc-comment-list .comment-author img {
+    border-radius: 50%;
+    border: 2px solid #8f8f8f;
+    position: absolute;
+    left: 0;
+}
+.gpsc-comment-list .comment-author .gpsc-comment-author {
+    font-weight: 700;
+    margin: 0 !important;
+    font-size: 16px !important;
+    text-transform: capitalize;
+}
+.gpsc-comment-list .comment-author .star-rating { 
+    float: unset;
+}
+.gpsc-comment-list .comment-author .star-rating span {
+    color: var(--secondary-color);
+} 
+.gpsc-comment-list .comment-reply {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    color: var(--primary-color);
+    border-bottom: 1px solid transparent;
+    transition: .3s ease-in-out;
+}
+.gpsc-comment-list .comment-reply a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 14px;
+    font-weight: 500;
+    font-family: var(--default-font);
+}
+.gpsc-comment-list .comment-reply:hover {
+    border-bottom: 1px solid var(--primary-color);
+}
 
-.gpsc-comment-list .woocommerce-page img {
-    
+.ask-question .gpsc-comment-list .comment-author {
+    display: flex;
+    align-items: center;
+}
+
+.gpsc-comment-list .comment-respond {
+    box-shadow: 0 0 10px #e1e1e1;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.gpsc-comment-list .comment-respond .comment-reply-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    font-family: var(--default-font);   
+    margin: 10px 0;
+}
+.gpsc-comment-list .comment-respond .comment-reply-title #cancel-comment-reply-link {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: var(--default-font);
+    color: var(--primary-color);
+    transition: .3s ease-in-out;
+}
+
+.gpsc-comment-list .comment-respond .comment-reply-title #cancel-comment-reply-link:hover {
+    color: var(--secondary-color);
+}
+
+.gpsc-comment-list .comment-respond .comment-form-rating {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.gpsc-comment-list .comment-respond label {
+    margin: 0;
+    position: relative;
+    font-size: 16px;
+} 
+.gpsc-comment-list .comment-respond .comment-form-rating label::after {
+    content: ':';
+    position: absolute;
+    right: -10px;    
+}
+.gpsc-comment-list .comment-respond .comment-form-rating label .required {
+    color: var(--primary-color);
+}
+
+.gpsc-comment-list .comment-respond .stars {
+    margin: 0 !important;
+    line-height: 1 !important;
+}
+.gpsc-comment-list .comment-respond .stars a {
+    color: var(--secondary-color);
+}
+.gpsc-comment-list .comment-respond .comment-form-comment label {
+    display: none;
+}
+.gpsc-comment-list .comment-respond .comment-form-comment #comment {
+    width: 100%;
+    border: 1px solid #eee;
+    outline: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--default-font);
 }
 
 /* Should remove inner spin buttons from quantity field */
