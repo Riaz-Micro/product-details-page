@@ -199,6 +199,19 @@
     margin-bottom: 0px;
 }
 
+.gpsc-gallery-area .gpsc-add-banner {
+    width: 100%;
+    height: 100px;
+    margin-top: 20px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.gpsc-gallery-area .gpsc-add-banner img {
+    max-height: 100px;
+}
+
+
 /* Product Info Area */
 .gpsc-product-info {
     margin: 0 0 15px;
@@ -663,8 +676,8 @@
 
 .gpsc-comment-list .comment-respond {
     box-shadow: 0 0 10px #e1e1e1;
-    padding: 10px 20px;
     border-radius: 10px;
+    padding: 10px 20px;
     margin-top: 20px;
 }
 
@@ -697,8 +710,8 @@
 
 .gpsc-comment-list .comment-respond label {
     margin: 0;
-    position: relative;
     font-size: 16px;
+    position: relative;
 } 
 .gpsc-comment-list .comment-respond .comment-form-rating label::after {
     content: ':';
@@ -708,7 +721,6 @@
 .gpsc-comment-list .comment-respond .comment-form-rating label .required {
     color: var(--primary-color);
 }
-
 .gpsc-comment-list .comment-respond .stars {
     margin: 0 !important;
     line-height: 1 !important;
@@ -721,13 +733,14 @@
 }
 .gpsc-comment-list .comment-respond .comment-form-comment #comment {
     width: 100%;
-    border: 1px solid #eee;
     outline: none;
-    padding: 10px 15px;
     font-size: 16px;
     font-weight: 400;
+    padding: 10px 15px;
+    border: 1px solid #eeeeee;
     font-family: var(--default-font);
 }
+
 
 /* Should remove inner spin buttons from quantity field */
 /* Chrome, Safari, Edge, Opera */

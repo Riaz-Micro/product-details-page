@@ -219,6 +219,9 @@ wp_enqueue_style( 'gpsc-sstyle', GPSC_PLUG_DIR_URL_FILE . 'public/css/gpsc-singl
                             ?>
                         </div>
                     </div>
+                    <div class="gpsc-add-banner">
+                    <a href="https://ibb.co/SVB2X0h"><img src="https://i.ibb.co/r5HgGMC/add.jpg" alt="advertisement"></a>
+                    </div>
                 </div>
                 <div class="gpsc-text-content-area">
                     <h1 class="gpsc-product-name"><?php echo '' . $frhd_the_product->get_name() . ''; ?></h1>
